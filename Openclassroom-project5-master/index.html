@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/page.html">
+    <meta property="og:title" content="Content Title">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta property="og:description" content="Description Here">
+    <meta property="og:site_name" content="Site Name">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@site_account">
+    <meta name="twitter:creator" content="@individual_account">
+    <meta name="twitter:url" content="https://example.com/page.html">
+    <meta name="twitter:title" content="Content Title">
+    <meta name="twitter:description" content="Content description less than 200 characters">
+    <meta name="twitter:image" content="https://example.com/image.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+    <link href="jquery-3.2.1.min.js">
+    <title>Quote Generator</title>
+    <link type="text/css"  rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="wrapper text-center" id="wrapperId">
+        <div>
+            <h1>Choose number of Quotes and types</h1>
+            <label for="quote">Types of Quotes : </label>
+            <select class="subject" name="subject" title="choice" id="quote">
+                <option value = "0"> Dreams</option>
+                <option value= "1">Success</option>
+
+            </select>
+            <label for="number">Number of Quotes : </label>
+            <select class="number" name="number" id="number">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <button type="submit" class="start">Generate Quotes</button>
+        </div>
+        <div class="row generatorOutPut"></div>
+    </div>
+
+</div><!--end of page container-->
+
+<script type="text/javascript" src="js/engine.js"></script>
+<script type="text/javascript" src="js/dec.js"></script>
+<script type="text/javascript" src="js/quote.js"></script>
+
+</body>
+</html>
