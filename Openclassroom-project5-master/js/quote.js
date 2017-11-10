@@ -1,6 +1,6 @@
 'use strict';
 
-//Creating array as const classes and use new keyword to link to the QuoteGenerator
+//Creating  Quotes classes.
 
 const quoteStore = new QuoteStore();
 
@@ -43,7 +43,7 @@ const successQuote = new QuoteSamples('success',
 
     ]);
 
-// Add Dreams and Success Quotes to Quote Sample Store Quote
+// Add Dreams and Success Quotes to Quote Store
 quoteStore.add(dreamsQuote);
 quoteStore.add(successQuote);
 
