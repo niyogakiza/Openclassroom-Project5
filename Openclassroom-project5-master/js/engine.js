@@ -3,7 +3,7 @@
 //Create an Object and Prototypes to link the Quote Generator.
 // Used underscore to functions to pick arguments from objects.
 
-
+//Create user interface
 const QuoteGenerator = function (wrapperID, quoteStore) {
     this._selectors = {
         'startButton': '.start',
@@ -16,14 +16,14 @@ const QuoteGenerator = function (wrapperID, quoteStore) {
     this.wrapper = document.getElementById(wrapperID);
     this.startButton = this.wrapper.querySelector(this._selectors.startButton);
     this.displayArea = this.wrapper.querySelector(this._selectors.resultWrapper);
-    this.quoteSubjectList = this.wrapper.querySelector(this._selectors.quoteTitle);
+    this.quoteTitleList = this.wrapper.querySelector(this._selectors.quoteTitle);
 };
-
+//Update values for selected number and types of quote
 QuoteGenerator.prototype.updateValues = function() {
     this.quoteAmount = this.wrapper.querySelector(this._selectors.quoteAmount).value;
     this.quoteTitleID = this.wrapper.querySelector(this._selectors.quoteTitle).value;
 };
-
+//Generating Quote List from the quote store by option
 QuoteGenerator.prototype.generateThemeList = function() {
     let i = 0;
 
@@ -32,12 +32,12 @@ QuoteGenerator.prototype.generateThemeList = function() {
         newTitleOption.text = this.quoteStore.quoteList[i].name;
         newTitleOption.value = i;
 
-        this.quoteSubjectList.add(newTitleOption);
+        this.quoteTitleList.add(newTitleOption);
 
         i++;
     }
 };
-
+//Make Quote generator give randomly quotes
 QuoteGenerator.prototype.randomNumber = function() {
     return Math.floor(Math.random() * 3);
 };
@@ -45,7 +45,7 @@ QuoteGenerator.prototype.randomNumber = function() {
 QuoteGenerator.prototype.cleanText = function() {
     this.displayArea.innerHTML = '';
 };
-
+//Quote store work flow randomly
 QuoteGenerator.prototype.generateQuote = function() {
     const beginningQuoteIndex = this.randomNumber();
     const middleQuoteIndex = this.randomNumber();
@@ -57,6 +57,7 @@ QuoteGenerator.prototype.generateQuote = function() {
 
     return new Quote(beginning, middle, end);
 };
+//Display quotes by Pressing button and clean text when you choose another Quote or number of quotes
 QuoteGenerator.prototype.displayQuotes = function() {
     this.startButton.addEventListener('click', function () {
         this.cleanText();
