@@ -1,10 +1,11 @@
 'use strict';
+//Creating work flow for Quotes
 const Quote = function (beginning, middle, end) {
     this.beginning = beginning;
     this.middle = middle;
     this.end = end;
 };
-
+//Creating work flow for Quotes samples
 const QuoteSamples = function (name, beginnings, middles, ends) {
     this.name = name;
     this.beginnings = beginnings;
