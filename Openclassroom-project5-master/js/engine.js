@@ -1,9 +1,7 @@
 'use strict';
 
-//Create an Object and Prototypes to link the Quote Generator.
-// Used underscore to functions to pick arguments from objects.
-
-//Create user interface
+//Create an Objects and Prototypes using this keyword to reference the elements
+//Reference user interface
 const QuoteGenerator = function (wrapperID, quoteStore) {
     this._selectors = {
         'startButton': '.start',
@@ -57,7 +55,7 @@ QuoteGenerator.prototype.generateQuote = function() {
 
     return new Quote(beginning, middle, end);
 };
-//Display quotes by Pressing button and clean text when you choose another Quote or number of quotes
+//Display quotes by Pressing button and update quotes and clean text in display area
 QuoteGenerator.prototype.displayQuotes = function() {
     this.startButton.addEventListener('click', function () {
         this.cleanText();
