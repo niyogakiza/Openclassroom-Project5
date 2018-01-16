@@ -26,4 +26,5 @@ Choose between 2 types of quote generators (accordingly, you'll need two differe
 Once the quotes are generated, have the program generate new quotes or quit the program
 
 Adapt the program so that it has these features!
+![ScreenShot](/Openclassroom-project5-master/images/screen.png)
 
